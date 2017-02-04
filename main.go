@@ -34,7 +34,7 @@ Results in:
 
 var (
 	hostAddr = flag.String("host", "127.0.0.1:12345", "Hostname and port")
-	config   = flag.String("config", "", "Config CSV filename")
+	config   = flag.String("config", "./config.csv", "Config CSV filename")
 )
 
 func main() {

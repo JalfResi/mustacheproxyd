@@ -12,24 +12,30 @@ Configuration is accomplished using a CSV file with the following columns:
 |------------------|-----------------------|----------------------------|
 | /users/(.*)      | http://example.com/$1 | ./templates/$1.mustache    |
 
-### Guard RegExp URL
+#### Guard RegExp URL
 Requested URLs must match the supplied pattern before they are processed. 
 Requests that do not match any pattern return HTTP 404.
 
-### Target URL
+#### Target URL
 The target URL to proxy the request to. RegExpression expansion may occur in
 the target URL. Expansion occurs per request.
 
-### Mustache template filename
+#### Mustache template filename
 The mustache template filename to use when trnascoding the response body from
 the target URL. RegExpression expansion may occur in the mustache template 
 filename. Expansion occurs per request.
 
 There may have multiple rules, one per row in the configuration CSV.
 
-## Program 
+## Usage 
 
 Mustacheproxyd has two command line options. They are:
 
-- host: The proxy listening hostname and port
-- config: Filepath of the configurtion CSV
+- host: The proxy listening hostname and port. Defaults to "127.0.0.1:12345"
+- config: Filepath of the configurtion CSV. Defaults to "./config.csv"
+
+For example:
+
+```sh
+mustacheproxyd --host="127.0.0.1:12345" --config="./config.csv"
+```
