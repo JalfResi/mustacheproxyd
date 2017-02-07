@@ -12,9 +12,10 @@ You can download the [latest release](https://github.com/JalfResi/mustacheproxyd
 
 Configuration is accomplished using a CSV file with the following columns:
 
-| Guard RegExp URL | Target URL            | Mustache template filename |
-|------------------|-----------------------|----------------------------|
-| /users/(.*)      | http://example.com/$1 | ./templates/$1.mustache    |
+| Guard RegExp URL | Target URL               | Mustache template filename |
+|------------------|--------------------------|----------------------------|
+| /users/(.*)      | http://example.com/$1    | ./templates/$1.mustache    |
+| /(.*)/(.*)       | http://$1.example.com/$2 | ./templates/$1/$2.mustache |
 
 #### Guard RegExp URL
 Requested URLs must match the supplied pattern before they are processed. 
