@@ -4,6 +4,10 @@ A HTTP proxy that transcodes origin JSON response bodies to HTML via mustache
 templates. This is useful for producing HTML output for a JSON API without
 modifying the API responses directly.
 
+## Download
+
+You can download the [latest release](https://github.com/JalfResi/mustacheproxyd/releases/latest). Currently only OSX is supported. Other supported OS will come soon.
+
 ## Configuration
 
 Configuration is accomplished using a CSV file with the following columns:
